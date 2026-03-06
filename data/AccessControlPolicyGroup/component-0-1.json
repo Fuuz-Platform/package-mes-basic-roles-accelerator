@@ -1,0 +1,22 @@
+{
+  "api": "application",
+  "modelName": "AccessControlPolicyGroup",
+  "payload": [
+    {
+      "id": "operator",
+      "name": "Operator",
+      "description": "Control Panel Operator"
+    },
+    {
+      "id": "receiving",
+      "name": "Receiving",
+      "description": ""
+    },
+    {
+      "id": "supervisor",
+      "name": "Supervisor",
+      "description": ""
+    }
+  ],
+  "metadata": {}
+}

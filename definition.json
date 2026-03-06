@@ -1,0 +1,219 @@
+{
+  "packageDefinition": {
+    "name": "MES Basic Roles and Policies"
+  },
+  "packageDefinitionVersion": {
+    "id": "clz1o1r200046356huqnf16os",
+    "version": "0.0.1"
+  },
+  "packageDefinitionSelections": [
+    {
+      "id": "clz1o1ra60047356hrorxo137",
+      "api": "application",
+      "modelName": "Role",
+      "selected": [
+        {
+          "id": "factory",
+          "label": "Factory"
+        },
+        {
+          "id": "production",
+          "label": "Production"
+        },
+        {
+          "id": "receiving",
+          "label": "Receiving"
+        },
+        {
+          "id": "wms",
+          "label": "WMS"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "menu"
+        },
+        {
+          "name": "homeScreenId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "labelField": [
+          {
+            "name": "name"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "clz1o1r200046356huqnf16os"
+    },
+    {
+      "id": "clz1o1ra70048356hqxr9j1e9",
+      "api": "application",
+      "modelName": "AccessControlPolicy",
+      "selected": [
+        {
+          "id": "controlPanelAccess",
+          "label": "Control Panel Access"
+        },
+        {
+          "id": "readOnlyAccess",
+          "label": "Read Only Access"
+        },
+        {
+          "id": "receiving",
+          "label": "receiving"
+        },
+        {
+          "id": "supervisor",
+          "label": "supervisor"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "policy"
+        },
+        {
+          "name": "description"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "labelField": [
+          {
+            "name": "name"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "clz1o1r200046356huqnf16os"
+    },
+    {
+      "id": "clz1o1ra70049356hxw3gcibm",
+      "api": "application",
+      "modelName": "AccessControlPolicyGroup",
+      "selected": [
+        {
+          "id": "operator",
+          "label": "Operator"
+        },
+        {
+          "id": "receiving",
+          "label": "Receiving"
+        },
+        {
+          "id": "supervisor",
+          "label": "Supervisor"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "labelField": [
+          {
+            "name": "name"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "clz1o1r200046356huqnf16os"
+    },
+    {
+      "id": "clz1o1ra7004a356hn6thx7r4",
+      "api": "application",
+      "modelName": "AccessControlPolicyGroupAccessControlPolicy",
+      "selected": [
+        {
+          "id": "clz1nlq4y03qh0875cq8reae7",
+          "label": "clz1nlq4y03qh0875cq8reae7"
+        },
+        {
+          "id": "clz1nlyf003qj08759fmigkg7",
+          "label": "clz1nlyf003qj08759fmigkg7"
+        },
+        {
+          "id": "clz1nm7y203ql0875fuapgwt6",
+          "label": "clz1nm7y203ql0875fuapgwt6"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "accessControlPolicyGroupId"
+        },
+        {
+          "name": "accessControlPolicyId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "labelField": [
+          {
+            "name": "id"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "clz1o1r200046356huqnf16os"
+    },
+    {
+      "id": "clz1o1ra7004b356hjblyu3w6",
+      "api": "application",
+      "modelName": "RoleAccessControlPolicyGroup",
+      "selected": [
+        {
+          "id": "clz1nmt2d03qn0875es3a3u2y",
+          "label": "clz1nmt2d03qn0875es3a3u2y"
+        },
+        {
+          "id": "clz1nn3y503qp0875alqe1qtt",
+          "label": "clz1nn3y503qp0875alqe1qtt"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "accessControlPolicyGroupId"
+        },
+        {
+          "name": "roleId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "labelField": [
+          {
+            "name": "id"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "clz1o1r200046356huqnf16os"
+    }
+  ]
+}

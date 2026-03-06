@@ -1,0 +1,17 @@
+{
+  "api": "application",
+  "modelName": "RoleAccessControlPolicyGroup",
+  "payload": [
+    {
+      "id": "clz1nmt2d03qn0875es3a3u2y",
+      "accessControlPolicyGroupId": "operator",
+      "roleId": "production"
+    },
+    {
+      "id": "clz1nn3y503qp0875alqe1qtt",
+      "accessControlPolicyGroupId": "receiving",
+      "roleId": "receiving"
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,156 @@
+{
+  "api": "application",
+  "modelName": "Role",
+  "payload": [
+    {
+      "id": "factory",
+      "name": "Factory",
+      "description": "",
+      "menu": {
+        "items": [
+          {
+            "icon": "industry-windows",
+            "text": "Control Panel",
+            "link": "https://build.rulonco.fuuz.app/productionManagement/manufacturing/controlPanelM/:id?New%20Screen.RequiredInventoryTable.view=Default"
+          },
+          {
+            "link": "/productionManagement/manufacturing/workOrderDispatch?New%20Screen.DispatchTable.view=Default",
+            "text": "Work Order Dispatch",
+            "icon": "list-radio"
+          }
+        ],
+        "icon": "industry-windows",
+        "title": "Factory"
+      },
+      "homeScreenId": null
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "description": "Production information",
+      "menu": {
+        "icon": "conveyor-belt",
+        "items": [
+          {
+            "icon": "laptop-code",
+            "link": "/productionManagement/manufacturing/workOrderDispatch?New%20Screen.DispatchTable.view=Default",
+            "text": "Work Order Dispatch"
+          },
+          {
+            "link": "/productionManagement/manufacturing/workOrders?WorkOrderTable.view=Default",
+            "text": "Work Orders",
+            "icon": "print"
+          },
+          {
+            "link": "/productionManagement/manufacturing/productionConfirmation?ProductionHistoryTable.Table1.view=MES",
+            "text": "Production Confirmation",
+            "icon": "check"
+          },
+          {
+            "text": "Work Order Process Status",
+            "link": "/productionManagement/manufacturing/workOrderProcessStatus?New%20Screen.Table1.view=Default",
+            "type": "submenu",
+            "icon": "magnifying-glass"
+          }
+        ],
+        "title": "Production"
+      },
+      "homeScreenId": "workOrderDispatch"
+    },
+    {
+      "id": "receiving",
+      "name": "Receiving",
+      "description": "",
+      "menu": {
+        "icon": "calendar",
+        "items": [
+          {
+            "icon": "list",
+            "link": "/supplyChainManagement/procurement/purchaseOrders",
+            "text": "Purchase Orders"
+          },
+          {
+            "icon": "scanner",
+            "link": "/supplyChainManagement/procurement/receiveProducts?Table%20Template.Table1.view=Default",
+            "text": "Receive Products"
+          },
+          {
+            "icon": "thumbs-up",
+            "link": "/materialsManagement/inventory/receiptConfirmation?Table%20Template.Table1.view=Default",
+            "text": "Confirm Receipts"
+          },
+          {
+            "icon": "search",
+            "link": "/supplyChainManagement/procurement/receipts",
+            "text": "Receipts"
+          },
+          {
+            "link": "/supplyChainManagement/procurement/suppliers?SupplierTable.view=Default",
+            "text": "Suppliers",
+            "icon": "truck-field"
+          },
+          {
+            "text": "Work Orders",
+            "link": "/productionManagement/manufacturing/workOrders?WorkOrderTable.Table1.view=Default",
+            "icon": "list"
+          },
+          {
+            "text": "Work Order Dispatch",
+            "link": "/productionManagement/manufacturing/workOrderDispatch?New%20Screen.DispatchTable.view=Default",
+            "icon": "industry"
+          }
+        ],
+        "title": "Receiving"
+      },
+      "homeScreenId": null
+    },
+    {
+      "id": "wms",
+      "name": "WMS",
+      "description": "https://build.rulonco.fuuz.app",
+      "menu": {
+        "icon": "boxes",
+        "items": [
+          {
+            "icon": "list",
+            "text": "Inventories",
+            "link": "/materialsManagement/inventory/inventory?InventoryTable.Table1.view=sasi"
+          },
+          {
+            "icon": "pallet-alt",
+            "link": "/materialsManagement/inventory/masterInventories?MasterInventoryTable.view=Default",
+            "text": "Master Inventory"
+          },
+          {
+            "icon": "boxes",
+            "link": "/materialsManagement/inventory/inventorySummaryByLocation",
+            "text": "Inventory by Location"
+          },
+          {
+            "link": "/materialsManagement/inventory/moveInventory",
+            "icon": "forklift",
+            "text": "Move Inventory"
+          },
+          {
+            "link": "/materialsManagement/inventory/mergeScreen",
+            "text": "Inventory Merge",
+            "icon": "merge"
+          },
+          {
+            "text": "Split",
+            "icon": "split",
+            "link": "/materialsManagement/inventory/InventorySplit"
+          },
+          {
+            "link": "/materialsManagement/inventory/inventoryAdjustment",
+            "text": "Inventory Adjustment",
+            "icon": "arrow-up-from-bracket"
+          }
+        ],
+        "title": "WMS"
+      },
+      "homeScreenId": null
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,255 @@
+{
+  "api": "application",
+  "modelName": "AccessControlPolicy",
+  "payload": [
+    {
+      "id": "controlPanelAccess",
+      "name": "Control Panel Access",
+      "policy": {
+        "statements": [
+          {
+            "effect": "allow",
+            "actions": [
+              "graphql:*"
+            ],
+            "resources": [
+              "graphql:materialsManagement:*",
+              "graphql:productDataManagement:*",
+              "graphql:productionManagement:*",
+              "graphql:system:configuration:sequence:*",
+              "graphql:system:configuration:sequenceNumber:*",
+              "graphql:system:configuration:unit:*",
+              "graphql:system:orchestration:*"
+            ],
+            "rules": []
+          },
+          {
+            "effect": "allow",
+            "actions": [
+              "orchestration:*"
+            ],
+            "resources": [
+              "orchestration:dataFlow:aggregateProductionHistoryOnEvent",
+              "orchestration:dataFlow:assignWorkOrders",
+              "orchestration:dataFlow:clockInClockOutOperatorInFuuz",
+              "orchestration:dataFlow:controlPanelRouter",
+              "orchestration:dataFlow:controlPanelWebFlow",
+              "orchestration:dataFlow:createAndonRequestFromWorkcenter",
+              "orchestration:dataFlow:createProductionDepletions",
+              "orchestration:dataFlow:createProductionSetupInFuuz",
+              "orchestration:dataFlow:createProductionSetupOutputProductionSetupBomInFuuz",
+              "orchestration:dataFlow:dispatchFunctions",
+              "orchestration:dataFlow:documentFlowFgLabel",
+              "orchestration:dataFlow:documentFlowMasterUnitLabel",
+              "orchestration:dataFlow:documentFlowReceivingLabel",
+              "orchestration:dataFlow:documentFlowRulonJobRpeort",
+              "orchestration:dataFlow:documentFlowRulonReceiving",
+              "orchestration:dataFlow:employeeClockFromScreen",
+              "orchestration:dataFlow:inventoryTransactionRouter",
+              "orchestration:dataFlow:productionFunctions",
+              "orchestration:dataFlow:recordProductionScrapInFuuz",
+              "orchestration:dataFlow:unloadProductionSetupOutputInFuuz",
+              "orchestration:dataFlow:webFlowLog",
+              "orchestration:dataFlow:workcenterFunctions"
+            ],
+            "rules": []
+          }
+        ]
+      },
+      "description": ""
+    },
+    {
+      "id": "readOnlyAccess",
+      "name": "Read Only Access",
+      "policy": {
+        "statements": [
+          {
+            "effect": "allow",
+            "actions": [
+              "graphql:query"
+            ],
+            "resources": [
+              "graphql:customerRelationshipManagement:*",
+              "graphql:edi:*",
+              "graphql:humanCapitalManagement:*",
+              "graphql:materialsManagement:*",
+              "graphql:productDataManagement:*",
+              "graphql:productionManagement:*",
+              "graphql:supplyChainManagement:*"
+            ],
+            "rules": []
+          },
+          {
+            "effect": "allow",
+            "actions": [
+              "screen:*"
+            ],
+            "resources": [
+              "screen:*"
+            ]
+          }
+        ]
+      },
+      "description": ""
+    },
+    {
+      "id": "receiving",
+      "name": "receiving",
+      "policy": {
+        "statements": [
+          {
+            "effect": "allow",
+            "actions": [
+              "graphql:*"
+            ],
+            "resources": [
+              "graphql:customerRelationshipManagement:sales:salesOrderLine:*",
+              "graphql:humanCapitalManagement:employees:approvalSubject",
+              "graphql:humanCapitalManagement:employees:approvalSubject:productStrategyProcessId",
+              "graphql:materialsManagement:*",
+              "graphql:productDataManagement:*",
+              "graphql:productionManagement:*",
+              "graphql:supplyChainManagement:*",
+              "graphql:system:accessControl:user:*",
+              "graphql:system:dataModeling:dataModel:*",
+              "graphql:system:integration:*",
+              "graphql:system:orchestration:savedQuery:*",
+              "graphql:system:orchestration:savedQueryDataChange:*",
+              "graphql:system:orchestration:savedQueryOperationType:*",
+              "graphql:system:orchestration:savedQueryOperationTypeDataChange:*"
+            ],
+            "rules": []
+          },
+          {
+            "effect": "allow",
+            "actions": [
+              "orchestration:*"
+            ],
+            "resources": [
+              "orchestration:dataFlow:adjustMasterInventoryInFuuz",
+              "orchestration:dataFlow:bomIntegrationFromNetSuite",
+              "orchestration:dataFlow:bomRevisionIntegrationFromNetSuite",
+              "orchestration:dataFlow:createNewInventoryFromScreen",
+              "orchestration:dataFlow:customerIntegration",
+              "orchestration:dataFlow:documentFlowExampleFingerLabel",
+              "orchestration:dataFlow:documentFlowFgLabel",
+              "orchestration:dataFlow:documentFlowMasterUnitLabel",
+              "orchestration:dataFlow:documentFlowReceivingLabel",
+              "orchestration:dataFlow:documentFlowRulonJobRpeort",
+              "orchestration:dataFlow:documentFlowRulonReceiving",
+              "orchestration:dataFlow:inventoryAdjustmentToNetSuiteOnDataChange",
+              "orchestration:dataFlow:inventoryTransactionRouter",
+              "orchestration:dataFlow:itemItegration",
+              "orchestration:dataFlow:itemShipmentsFromNetsuite",
+              "orchestration:dataFlow:locationIntegrationFromNetSuite",
+              "orchestration:dataFlow:locationIntegrationImportFromNetSuite",
+              "orchestration:dataFlow:locationsToNetSuiteBinsOnDataChange",
+              "orchestration:dataFlow:manufacturingRoutingIntegrationFromNetSuite",
+              "orchestration:dataFlow:productionHistoryToWorkOrderCompletionToNetSuite",
+              "orchestration:dataFlow:productStrategiesFromNetsuite",
+              "orchestration:dataFlow:purchaseOrderIntegration",
+              "orchestration:dataFlow:qualityDisposition",
+              "orchestration:dataFlow:receiptConfirmationFromScreen",
+              "orchestration:dataFlow:receiptFromScreen",
+              "orchestration:dataFlow:receiptToNetSuiteItemReceipt",
+              "orchestration:dataFlow:salesOrdersFromNetSuite",
+              "orchestration:dataFlow:suppliersFromNetsuiteVendors",
+              "orchestration:dataFlow:unitsFromNetsuite",
+              "orchestration:dataFlow:upsertInventoryInFuuz",
+              "orchestration:dataFlow:webFlowLog",
+              "orchestration:dataFlow:webUnloadMaster",
+              "orchestration:dataFlow:workcenterFunctions",
+              "orchestration:dataFlow:workcenterIntegrationFromNetSuite",
+              "orchestration:dataFlow:workOrderProgressFunctions",
+              "orchestration:dataFlow:workOrdersBoMsAndProcessesFromNetsuiteSuiteQl"
+            ],
+            "rules": []
+          }
+        ]
+      },
+      "description": ""
+    },
+    {
+      "id": "supervisor",
+      "name": "supervisor",
+      "policy": {
+        "statements": [
+          {
+            "effect": "allow",
+            "actions": [
+              "graphql:*"
+            ],
+            "resources": [
+              "graphql:materialsManagement:*",
+              "graphql:productDataManagement:*",
+              "graphql:productionManagement:*",
+              "graphql:supplyChainManagement:*",
+              "graphql:system:configuration:externalApplication:*",
+              "graphql:system:configuration:externalApplicationDataChange:*",
+              "graphql:system:configuration:userSettingValue:*",
+              "graphql:system:integration:connection:*",
+              "graphql:system:integration:connectionDataChange:*",
+              "graphql:system:integration:connector:*",
+              "graphql:system:integration:externalTransaction:*",
+              "graphql:system:integration:externalTransactionDataChange:*",
+              "graphql:system:integration:integrationRequest:*",
+              "graphql:system:integration:integrationRequestDataChange:*",
+              "graphql:system:integration:integrationRequestLog:*",
+              "graphql:system:integration:integrationRequestStatus:*",
+              "graphql:system:integration:integrationRequestStatusDataChange:*",
+              "graphql:system:integration:integrationTransaction:*",
+              "graphql:system:integration:integrationTransactionStatus:*",
+              "graphql:system:integration:integrationTransactionStatusDataChange:*",
+              "graphql:system:integration:shipperFulfillment:*",
+              "graphql:system:integration:shipperFulfillmentDataChange:*"
+            ],
+            "rules": []
+          },
+          {
+            "effect": "allow",
+            "actions": [
+              "orchestration:*"
+            ],
+            "resources": [
+              "orchestration:dataFlow:bomIntegrationFromNetSuite",
+              "orchestration:dataFlow:clockInClockOutOperatorInFuuz",
+              "orchestration:dataFlow:createOverProductionFromScreen",
+              "orchestration:dataFlow:createProductAndProductStrategy",
+              "orchestration:dataFlow:createProductionSetupOutputProductionSetupBomInFuuz",
+              "orchestration:dataFlow:customerIntegration",
+              "orchestration:dataFlow:dispatchFunctions",
+              "orchestration:dataFlow:inventoryAdjustmentToNetSuiteOnDataChange",
+              "orchestration:dataFlow:locationIntegrationImportFromNetSuite",
+              "orchestration:dataFlow:locationsOnWorkcenterCreation",
+              "orchestration:dataFlow:manufacturingRoutingIntegrationFromNetSuite",
+              "orchestration:dataFlow:productStrategiesFromNetsuite",
+              "orchestration:dataFlow:productStrategyFromProductCreationOnEvent",
+              "orchestration:dataFlow:purchaseOrderIntegration",
+              "orchestration:dataFlow:scheduleWorkcenterHistoryUpdatesOnShiftStart",
+              "orchestration:dataFlow:schedulingFromScreen",
+              "orchestration:dataFlow:setAlternateWorkcenter",
+              "orchestration:dataFlow:splitContainerInFuuz",
+              "orchestration:dataFlow:unitsFromNetsuite",
+              "orchestration:dataFlow:unloadProductionSetupOutputInFuuz",
+              "orchestration:dataFlow:updateCalendarEventOnEventDistributionGroupUpdate",
+              "orchestration:dataFlow:updateProductionSetupOutputWorkOrderProcessDistribution",
+              "orchestration:dataFlow:updateWorkcenterHistoryOnDataChange",
+              "orchestration:dataFlow:upsertInventoryInFuuz",
+              "orchestration:dataFlow:webFlowLog",
+              "orchestration:dataFlow:webUnloadMaster",
+              "orchestration:dataFlow:workcenterIntegrationFromNetSuite",
+              "orchestration:dataFlow:workOrderDistributionsFromScreen",
+              "orchestration:dataFlow:workOrderProcessesToSchedule",
+              "orchestration:dataFlow:workOrderProgressFunctions",
+              "orchestration:dataFlow:workOrdersBoMsAndProcessesFromNetsuiteSuiteQl",
+              "orchestration:dataFlow:workOrderUpdatesFromScreen"
+            ],
+            "rules": []
+          }
+        ]
+      },
+      "description": ""
+    }
+  ],
+  "metadata": {}
+}
